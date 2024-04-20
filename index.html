@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- header -->
+      <header>
+        <div class="spaces"></div>
+        <div class="headerContainer">
+          <span>Home</span>
+          <!-- line -->
+          <span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="7"
+              height="14"
+              viewBox="0 0 7 14"
+              fill="none"
+            >
+              <path d="M1 13L6 1" stroke="#555555" />
+            </svg>
+          </span>
+
+          <span>XUV 700</span>
+          <!-- line -->
+          <span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="7"
+              height="14"
+              viewBox="0 0 7 14"
+              fill="none"
+            >
+              <path d="M1 13L6 1" stroke="#555555" />
+            </svg>
+          </span>
+
+          <span><b> Enquire now </b></span>
+        </div>
+      </header>
+      <!-- content -->
+      <main>
+        <h1>Enquire now</h1>
+        <p>Please enter your details.</p>
+
+        <!-- form container -->
+        <div class="formContainer">
+          <div class="grid2">
+            <!-- first name -->
+            <div class="inputFields">
+              <span class="label">First Name *</span>
+              <input type="text" placeholder="First Name" />
+            </div>
+            <!-- last name -->
+            <div class="inputFields">
+              <span class="label">Last Name *</span>
+              <input type="text" placeholder="Last Name" />
+            </div>
+            <!-- contact number -->
+            <div class="inputFields">
+              <span class="label">Contact Number *</span>
+              <div class="contactNumber">
+                <span>+91</span>
+                <input type="text" placeholder="Contact Number" />
+              </div>
+            </div>
+            <!-- email address -->
+            <div class="inputFields">
+              <span class="label">Email Name *</span>
+              <input type="email" placeholder="Email Name" />
+            </div>
+            <!-- city -->
+            <div class="inputFields dropdownContainer">
+              <span class="label">City *</span>
+              <div class="dropdown">
+                <p class="text">Select</p>
+                <span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                  >
+                    <path
+                      d="M19.5 8.25L12 15.75L4.5 8.25"
+                      stroke="black"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+              </div>
+
+              <!-- dropdown options -->
+              <div class="dropdownOptions">
+                <span>Mumbai</span>
+                <span>Mumbai 1</span>
+                <span>Mumbai 2</span>
+              </div>
+            </div>
+            <!-- state -->
+            <div class="inputFields dropdownContainer">
+              <span class="label">State *</span>
+              <div class="dropdown">
+                <p class="text">Select</p>
+                <span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                  >
+                    <path
+                      d="M19.5 8.25L12 15.75L4.5 8.25"
+                      stroke="black"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+              </div>
+
+              <!-- dropdown options -->
+              <div class="dropdownOptions">
+                <span>Maharashtra</span>
+                <span>Maharashtra 1</span>
+                <span>Maharashtra 2</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- model -->
+          <div class="inputFields dropdownContainer mt-24">
+            <span class="label">Model *</span>
+            <div class="dropdown">
+              <p class="text">Select</p>
+              <span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    d="M19.5 8.25L12 15.75L4.5 8.25"
+                    stroke="black"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+            </div>
+            <!-- dropdown options -->
+            <div class="dropdownOptions">
+              <span>XUV 700</span>
+              <span>XUV 400</span>
+              <span>Thar</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- agree -->
+        <div class="agreeContainer">
+          <p class="checkbox">
+            <span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+              >
+                <path
+                  d="M2.25 8.5L5.75 12L13.75 4"
+                  stroke="white"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </span>
+          </p>
+          <p>
+            I agree to be contacted by Mahindra & Mahindra and associates
+            regarding my interest via phone call, WhatsApp or any other medium.
+            I also agree to website’s T&C and Privacy Policy.
+          </p>
+        </div>
+
+        <!-- button -->
+        <button class="btns">Submit</button>
+      </main>
+    </div>
+
+    <!-- script -->
+    <script>
+      let dropdownContainers = document.querySelectorAll(".dropdownContainer");
+
+      dropdownContainers.forEach((container) => {
+        let dropdown = container.querySelector(".dropdown");
+        let dropdownOptions = container.querySelector(".dropdownOptions");
+        let pTag = container.querySelector(".text");
+
+        dropdown.addEventListener("click", () => {
+          // Close all other dropdowns
+          dropdownContainers.forEach((otherContainer) => {
+            if (otherContainer !== container) {
+              otherContainer
+                .querySelector(".dropdownOptions")
+                .classList.remove("show");
+            }
+          });
+
+          // Toggle the visibility of the dropdownOptions
+          dropdownOptions.classList.toggle("show");
+        });
+
+        // Add event listener to dropdown options
+        dropdownOptions.querySelectorAll("span").forEach((option) => {
+          option.addEventListener("click", () => {
+            let selectedOption = option.textContent;
+            pTag.textContent = selectedOption; // Update the text in the <p> tag
+            dropdownOptions.classList.remove("show"); // Hide the dropdownOptions after selection
+          });
+        });
+      });
+
+      // check box
+      let checkbox = document.querySelector(".agreeContainer .checkbox");
+
+      checkbox.addEventListener("click", () => {
+        checkbox.classList.toggle("show");
+      });
+    </script>
+  </body>
+</html>
