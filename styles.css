@@ -209,3 +209,46 @@ main .formContainer {
   cursor: pointer;
   font-size: 1rem;
 }
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .container {
+    padding: 10px;
+  }
+
+  .headerContainer {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid2 {
+    grid-template-columns: repeat(
+      1,
+      1fr
+    ); /* Change to single column for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .inputFields input {
+    padding: 12px;
+    font-size: 12px;
+  }
+
+  .inputFields .contactNumber span {
+    font-size: 12px;
+  }
+
+  .inputFields .contactNumber input {
+    padding-left: 30px;
+  }
+
+  .inputFields .dropdown p {
+    font-size: 12px;
+  }
+
+  .dropdownContainer .dropdownOptions span {
+    padding: 12px 15px;
+  }
+}
