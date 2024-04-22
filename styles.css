@@ -1,12 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Georama+SemiExpanded:wght@400;700&display=swap");
+
+/* Rest of your CSS styles */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Georama SemiExpanded";
 }
 
 body {
   background-color: #f5f5f5;
+  font-family: "Lato", sans-serif;
 }
 
 .container {
@@ -46,6 +51,7 @@ h1 {
   text-transform: uppercase;
   font-size: 24px;
   font-weight: 700;
+  font-family: "Georama", sans-serif;
 }
 
 p {
@@ -199,6 +205,7 @@ main .formContainer {
 .btns {
   max-width: 443px;
   width: 100%;
+  height: var(--component-button-input-height-medium, 52px);
   padding: 24px 20px;
   display: flex;
   align-items: center;
