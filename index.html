@@ -87,7 +87,7 @@
               <span class="label">City *</span>
               <div class="dropdown">
                 <p class="text">Select</p>
-                <span>
+                <span class="arrow">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -117,7 +117,7 @@
               <span class="label">State *</span>
               <div class="dropdown">
                 <p class="text">Select</p>
-                <span>
+                <span class="arrow">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -149,7 +149,7 @@
             <span class="label">Model *</span>
             <div class="dropdown">
               <p class="text">Select</p>
-              <span>
+              <span class="arrow">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -198,7 +198,7 @@
           <p>
             I agree to be contacted by Mahindra & Mahindra and associates
             regarding my interest via phone call, WhatsApp or any other medium.
-            I also agree to website’s T&C and Privacy Policy.
+            I also agree to website’s T&C and Privacy Policy.
           </p>
         </div>
 
@@ -215,6 +215,7 @@
         let dropdown = container.querySelector(".dropdown");
         let dropdownOptions = container.querySelector(".dropdownOptions");
         let pTag = container.querySelector(".text");
+        let arrow = container.querySelector(".arrow"); // Select the arrow element
 
         dropdown.addEventListener("click", () => {
           // Close all other dropdowns
@@ -223,11 +224,16 @@
               otherContainer
                 .querySelector(".dropdownOptions")
                 .classList.remove("show");
+              // Reset arrow rotation for other dropdowns
+              otherContainer.querySelector(".arrow").classList.remove("rotate");
             }
           });
 
           // Toggle the visibility of the dropdownOptions
           dropdownOptions.classList.toggle("show");
+
+          // Rotate the arrow
+          arrow.classList.toggle("rotate");
         });
 
         // Add event listener to dropdown options
@@ -236,6 +242,7 @@
             let selectedOption = option.textContent;
             pTag.textContent = selectedOption; // Update the text in the <p> tag
             dropdownOptions.classList.remove("show"); // Hide the dropdownOptions after selection
+            arrow.classList.remove("rotate"); // Reset arrow rotation after selection
           });
         });
       });
