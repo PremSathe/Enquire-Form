@@ -23,6 +23,8 @@ body {
 }
 .logo {
   display: flex;
+  padding: 0 4.686%;
+
   align-items: center;
   /* gap: 64px; */
 }
@@ -36,7 +38,7 @@ body {
 
 header .spaces {
   display: flex;
-  height: 68px;
+  height: 70px;
   padding: var(--spacing-5, 16px) var(--spacing-2, 32px);
   justify-content: space-between;
   align-items: center;
@@ -83,7 +85,7 @@ header .spaces {
   display: flex;
   align-items: center;
   gap: 8px;
-  background-color: #7b7b7b;
+  background: var(--bg-secondary, #262626);
 }
 
 .headerContainer span {
