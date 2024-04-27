@@ -347,15 +347,6 @@ main .formContainer {
 }
 
 /* Responsive styles */
-@media (max-width: 1024px) {
-  .container {
-    padding: 10px;
-  }
-
-  .headerContainer {
-    padding: 10px;
-  }
-}
 
 @media (max-width: 768px) {
   .grid2 {
@@ -377,7 +368,7 @@ main .formContainer {
   }
 
   .inputFields .contactNumber input {
-    padding-left: 30px;
+    padding-left: 40px;
   }
 
   .inputFields .dropdown p {
@@ -495,6 +486,13 @@ main .formContainer {
 }
 
 /* Media queries for mobile and tablet */
+@media screen and (max-width: 600px) {
+  .confirmed-msg pre {
+    line-height: 20px; /* Adjust to fit three lines */
+    white-space: normal; /* Allow text to wrap */
+    text-align: center;
+  }
+}
 @media screen and (max-width: 768px) {
   /* Adjust styles for mobile and tablet screens here */
   .confirmed-container {
