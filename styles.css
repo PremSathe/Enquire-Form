@@ -8,27 +8,21 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
-  /* background-color: #f5f5f5; */
-  /* background-color: #7b7b7b; */
   background-color: #101014;
   font-family: "Lato", sans-serif;
 }
-
 .container {
   width: 100%;
   height: 100%;
   min-height: 100vh;
 }
-
 .logo {
   display: flex;
   padding: 0 46.86px;
   padding-left: 38.5px;
   align-items: center;
 }
-
 .menu {
   display: flex;
   align-items: center;
@@ -71,7 +65,7 @@ header .spaces {
 }
 .nav p {
   color: var(--foreground-primary, #fff);
-  font-family: "Georama SemiExpanded";
+  font-family: "Georama", sans-serif;
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
@@ -309,8 +303,6 @@ main .formContainer {
   width: 24px;
   min-width: 24px;
   height: 24px;
-  /* border: 1px solid white; */
-  /* background-color: white; */
 }
 
 .agreeContainer .checkbox.show {
@@ -383,7 +375,7 @@ main .formContainer {
   }
 }
 
-/* ----------------------------------------------------confirmed----------------------------------------- */
+/* -------------------------------------------------confirmed Page-------------------------------------- */
 /* CSS for confirmed container */
 .confirmed-container {
   display: flex;
@@ -438,11 +430,11 @@ main .formContainer {
   text-align: center;
 
   /* body/p1/regular */
-  font-family: Lato;
+  font-family: "Lato", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
-  line-height: 26px; /* 144.444% */
+  line-height: 26px;
 }
 
 /* Button container styles */
@@ -517,7 +509,139 @@ main .formContainer {
   }
 }
 
-/* For laptop/desktop devices */
-@media only screen and (min-width: 1025px) {
-  /* Add your styles for larger screens here */
+/* -----------------------------------Error-404-Page----------------------------------- */
+
+.headerContainer_404 {
+  height: 36.4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-2, 32px);
+  align-self: stretch;
+}
+.left_404 {
+  padding: 0 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-2, 32px);
+  align-self: stretch;
+}
+.middle_404 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+}
+.right_404 {
+  display: flex;
+  max-width: var(--component-33, 320px);
+  padding: var(--spacing-5, 12px) var(--spacing-3, 20px);
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+}
+
+.right_404 svg {
+  width: var(--spacing-3, 20px);
+  height: var(--spacing-3, 20px);
+}
+
+.img_container_404 {
+  background: url(./images/banner_404.png) lightgray 50% / cover no-repeat;
+  width: 100%;
+  height: 654px;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+.content_404 {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spacing-4, 20px);
+}
+
+.heading_404 {
+  color: var(--foreground-primary, #fff);
+  width: 602px;
+  font-family: "Georama", sans-serif;
+  font-size: 38px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 110%; /* 41.8px */
+  text-transform: uppercase;
+}
+
+.subheading_404 p {
+  color: var(--foreground-primary, #fff);
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px; /* 144.444% */
+}
+
+.btn_container_404 {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 40px;
+}
+
+.btn1_404 {
+  gap: 8px;
+  display: flex;
+  width: 250px;
+  max-width: 443px;
+  height: var(--component-button-input-height-medium, 52px);
+  padding: var(--spacing-3, 24px) var(--spacing-4, 20px);
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: var(--component-button-input-button-corner-radius, 64px);
+  background-color: var(--foreground-primary, #fff);
+  color: var(--background-primary, #000);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn_404:hover {
+  background-color: var(--foreground-secondary, #ccc);
+}
+
+.btn2_404 {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  gap: 8px;
+  display: flex;
+  width: 250px;
+  max-width: 443px;
+  height: var(--component-button-input-height-medium, 52px);
+  padding: var(--spacing-3, 24px) var(--spacing-4, 20px);
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: var(--component-button-input-button-corner-radius, 64px);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn2_404:hover {
+  background-color: var(--foreground-secondary, #fff);
+  color: black;
+}
+
+/* -------------------------------------Error-500-Page------------------------------------- */
+.img_container_500 {
+  background: url(./images/banner_500.png) lightgray 50% / cover no-repeat;
+  width: 100%;
+  height: 654px;
+  display: flex;
+  justify-content: right;
+  align-items: center;
 }
