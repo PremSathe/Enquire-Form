@@ -492,7 +492,7 @@ main .formContainer {
   /* Adjust styles for mobile and tablet screens here */
   .confirmed-container {
     height: auto;
-    padding: 20px;
+    /* padding: 20px; */
   }
 
   .btn {
@@ -648,6 +648,43 @@ main .formContainer {
   color: black;
 }
 
+@media screen and (max-width: 600px) {
+  .img_container_404 {
+    background-image: cover;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+  }
+
+  .right_404 {
+    display: none;
+  }
+  .content_404 {
+    padding: 50px;
+    align-items: center; /* Center align items horizontally on tablets and mobile */
+    text-align: center; /* Center align text */
+    margin: 0 -155px;
+  }
+
+  .heading_404 {
+    /* align-self: flex-end; */
+    font-size: 28px;
+  }
+  .subheading_404 {
+    align-self: center;
+    font-size: 14px;
+  }
+
+  .btn_container_404 {
+    gap: 16px;
+    flex-direction: column;
+  }
+}
+
+/* @media screen and (max-width: 768px) {
+  
+} */
+
 /* -------------------------------------Error-500-Page------------------------------------- */
 .img_container_500 {
   background: url(./images/banner_500.png) lightgray 50% / cover no-repeat;
@@ -656,4 +693,28 @@ main .formContainer {
   display: flex;
   justify-content: right;
   align-items: center;
+}
+.heading_500 {
+  color: var(--foreground-primary, #fff);
+  width: 602px;
+  font-family: "Georama", sans-serif;
+  font-size: 38px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 110%; /* 41.8px */
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 600px) {
+  .img_container_500 {
+    background-image: cover;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+  }
+  .heading_500 {
+    font-size: 1cqmin;
+    display: block; /* Ensure the heading displays as a block element */
+    line-height: 1.2; /* Adjust line height if needed */
+  }
 }
