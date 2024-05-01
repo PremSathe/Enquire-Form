@@ -713,7 +713,7 @@ main .formContainer {
     align-items: center;
   }
   .heading_500 {
-    font-size: 1cqmin;
+    font-size: 18px;
     display: block; /* Ensure the heading displays as a block element */
     line-height: 1.2; /* Adjust line height if needed */
   }
