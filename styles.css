@@ -324,6 +324,7 @@ main .formContainer {
 
 .btns {
   max-width: 443px;
+  font-family: "Lato", sans-serif;
   width: 100%;
   height: var(--component-button-input-height-medium, 52px);
   padding: 24px 20px;
@@ -451,6 +452,8 @@ main .formContainer {
 
 /* Button styles */
 .btn1 {
+  font-family: "Lato", sans-serif;
+
   border: 1px solid white;
   background-color: black;
   color: white;
@@ -467,6 +470,8 @@ main .formContainer {
 }
 
 .btn2 {
+  font-family: "Lato", sans-serif;
+
   border: 1px solid #101014;
   gap: 8px;
   display: flex;
@@ -569,7 +574,7 @@ main .formContainer {
   align-items: center;
 }
 
-.content_404 {
+.content_404, .content_500 {
   display: inline-flex;
   flex-direction: column;
   align-items: flex-start;
@@ -586,7 +591,7 @@ main .formContainer {
   text-transform: uppercase;
 }
 
-.subheading_404 p {
+.subheading_404 p, .subheading_50 p{
   color: var(--foreground-primary, #fff);
   font-family: "Lato", sans-serif;
   font-size: 18px;
@@ -596,14 +601,16 @@ main .formContainer {
   margin-top: 7px;
 }
 
-.btn_container_404 {
+.btn_container_404, .btn_container_500 {
   display: flex;
   justify-content: center;
   gap: 16px;
   margin-top: 20px;
 }
 
-.btn1_404 {
+.btn1_404, .btn1_500{
+  font-family: "Lato", sans-serif;
+
   gap: 8px;
   display: flex;
   width: 250px;
@@ -625,7 +632,9 @@ main .formContainer {
   background-color: var(--foreground-secondary, #ccc);
 }
 
-.btn2_404 {
+.btn2_404, .btn2_500 {
+  font-family: "Lato", sans-serif;
+
   background-color: transparent;
   color: white;
   border: 1px solid white;
@@ -643,7 +652,7 @@ main .formContainer {
   transition: background-color 0.3s ease;
 }
 
-.btn2_404:hover {
+.btn2_404:hover,.btn2_500:hover {
   background-color: var(--foreground-secondary, #fff);
   color: black;
 }
@@ -659,7 +668,7 @@ main .formContainer {
   .right_404 {
     display: none;
   }
-  .content_404 {
+  .content_404, .content_500 {
     padding: 50px;
     align-items: center; /* Center align items horizontally on tablets and mobile */
     text-align: center; /* Center align text */
@@ -670,12 +679,12 @@ main .formContainer {
     /* align-self: flex-end; */
     font-size: 28px;
   }
-  .subheading_404 {
+  .subheading_404, .subheading_500 {
     align-self: center;
     font-size: 14px;
   }
 
-  .btn_container_404 {
+  .btn_container_404, .btn_container_500 {
     gap: 16px;
     flex-direction: column;
   }
